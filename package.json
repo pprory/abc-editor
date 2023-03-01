@@ -1,14 +1,14 @@
 {
-  "name": "easy-editor",
-  "version": "0.0.1",
-  "description": "easy-editor developing",
+  "name": "abc-editor",
+  "version": "0.0.2",
+  "description": "abc-editor developing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pprory/easy-editor.git"
+    "url": "git+https://github.com/pprory/abc-editor.git"
   },
   "author": {
     "name": "rory",
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pprory/easy-editor/issues"
+    "url": "https://github.com/pprory/abc-editor/issues"
   },
-  "homepage": "https://github.com/pprory/easy-editor#readme"
+  "homepage": "https://github.com/pprory/abc-editor#readme"
 }
