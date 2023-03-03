@@ -3,8 +3,14 @@
   "version": "0.0.2",
   "description": "abc-editor developing",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:prettier": "prettier --write --loglevel warn \"./**/*.{js,ts,css,html}\"",
+    "lint:eslint": "eslint . --ext .js,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,5 +25,29 @@
   "bugs": {
     "url": "https://github.com/pprory/abc-editor/issues"
   },
-  "homepage": "https://github.com/pprory/abc-editor#readme"
+  "homepage": "https://github.com/pprory/abc-editor#readme",
+  "dependencies": {
+    "abc": "^0.6.1",
+    "test": "file:packages/test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "eslint": "^8.35.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "lint-staged": {
+    "./**/*.{js,css,less,scss,html,md}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "./**/*.{js,.cjs,.mjs,.ts,.tsx,.cts,.mts}": [
+      "eslint --fix --ignore-path .gitignore"
+    ]
+  }
 }

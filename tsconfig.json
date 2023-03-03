@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": true,
+    },
+    "exlude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "./packages/**/*",
+        "./.eslintrc.js"
+    ]
+}
